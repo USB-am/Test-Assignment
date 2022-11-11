@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home_page/home_page.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="header" style="background: url({% static 'img/home_page/header-bg.svg' %});">
+			<div class="logo">
+				<img src="{% static 'img/home_page/logo.svg' %}" alt="Logo">
+			</div>
+
+			<div class="middle-content">
+				<div class="header__title">
+					<h1>Международная научно-практическая онлайн-олимпиада</h1>
+				</div>
+				<div class="right-image">
+					<img src="{% static 'img/home_page/header-image.svg' %}">
+				</div>
+			</div>
+			<div class="button-container">
+				<!-- Это какой-то мрак... -->
+				<a href="{% url 'registration' %}" class="button">Принять участие</a>
+			</div>
+
+			<div class="header-footer">
+				<div class="left-info">
+					<!-- TODO: vertical align -->
+					<p>Место проведения онлайн-олимпиады:</p>
+				</div>
+				<div class="right-info">
+					<p>Ростовский государственный экономический университет (РИНХ), Точка кипения РГЭУ (РИНХ)<br>
+					г. Ростов-на-Дону, ул. Б. Садовая, 69</p>
+				</div>
+			</div>
+		</div>
+	</header>
+</body>
+</html>

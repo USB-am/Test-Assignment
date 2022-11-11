@@ -1,0 +1,22 @@
+
+/* === Button === */
+.button-container {
+	padding-top: 6.5%;
+}
+.button {
+	padding: 20px 64px;
+	background: #5B98E3;
+	border-radius: 9px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 150%;
+	color: #fff;
+	transition: .3s;
+}
+.button:hover {
+	transition: .3s;
+	background: #47A7D2;
+}
+/* === Button === */
