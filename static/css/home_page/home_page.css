@@ -1,61 +1,176 @@
-.header {
+ =============== */
+/* === GLOBALS === */
+.container {
+	margin: 0 165px;
+}
+/* === GLOBALS === */
+/* =============== */
+
+/* ============== */
+/* === HEADER === */
+header {
+	min-height: 799px;
+}
+.header-wrapper {
+	padding: 80px 62px 42px 165px;
+}
+.header__content {
 	position: relative;
-	width: 84.25%;
-	padding-top: 5.5%;
-	padding-right: 4.3%;
-	padding-left: 11.45%;
-	padding-bottom: 5.25%;
-	min-height: 80vh;
-	background-repeat: no-repeat;
-	background-size: 100%;
 }
-.middle-content {
-	position: relative;
-}
-.right-image {
-	position: absolute;
-	right: 0;
-	top: 0;
-	float: right;
-}
-.header__title {
+.header__content-title {
 	padding-top: 84px;
-	position: relative;
-}
-.header__title h1 {
-	position: relative;
-	width: 50%;
+	margin-left: 0;
+	margin-bottom: 54px;
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 900;
 	font-size: 46px;
-	line-height: 150%;
+	line-height: 69px;
 	color: #fff;
+	width: 50%;
 }
-.header-footer {
+.header__content-image {
 	position: absolute;
-	left: 0;
-	bottom: 0;
-	margin-left: 11.45%;
-	margin-bottom: 2.625%;
-	width: 82.44%;
+	top: 0;
+	right: 0;
 }
-.left-info {
-	float: left;
-	font-family: 'Montserrat';
+.participation {
+	width: 49%;
+	display: flex;
+	justify-content: space-between;
+	/*margin-bottom: 139px;*/
+}
+.button {
+	padding: 23px 64px;
+	background: #5B98E3;
+	border-radius: 9px;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+.timer {
+	padding: 23px 64px;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.header__footer {
+	margin-top: 137px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.header__footer-left {
+	margin-right: 26px;
+}
+.header__footer-left p {
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
-	line-height: 150%;
-	color: #fff;
-	margin-right: 2.2%;
+	line-height: 21px;
+	color: #FFFFFF;
 }
-.right-info {
-	float: left;
-	font-family: 'Montserrat';
+.header__footer-right {
+	max-width: 847px;
+	margin-right: 26px;
+}
+.header__footer-right p {
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 150%;
-	color: #fff;
+	line-height: 21px;
+	color: #FFFFFF;
 }
+/* === HEADER === */
+/* ============== */
+
+/* ================== */
+/* === ORGANIZERS === */
+.organizers {
+	min-height: 180px;
+	background: linear-gradient(89.95deg, #211EAA 0.04%, #3648B9 99.96%);
+	padding: 40px 155px 0 166px;
+	margin-bottom: 70px;
+}
+.organizers__info-block {
+	display: flex;
+}
+.organizers__info-block-wrapper {
+	margin-right: 52px;
+}
+.organizers__info-block-wrapper:last-child {
+	margin-right: 0;
+}
+.info-block__title {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 27px;
+	color: #FFFFFF;
+	margin-bottom: 23px;
+	letter-spacing: -0.4px
+}
+.info-block__content {
+	display: flex;
+}
+.info-block__content-item {
+	margin-right: 27px;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 17px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.info-block__content-item:last-child {
+	margin-right: 0;
+}
+/* === ORGANIZERS === */
+/* ================== */
+
+/* ============== */
+/* === STAGES === */
+.stages {
+	min-height: 596px;
+	margin: 0 165px;
+}
+.stages__title {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 45px;
+	color: #2A30B1;
+	margin-bottom: 37px;
+}
+.stages__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+.stages__grid-wrapper {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	gap: 45px;
+}
+.stages__text {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #2A30B1;
+	letter-spacing: -1.55px;
+}
+/* === STAGES === */
+/* ============== */

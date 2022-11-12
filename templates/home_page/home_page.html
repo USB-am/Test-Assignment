@@ -1,47 +1,71 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<title>Test</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+{% block title %}
+	<title>Home page</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/home_page/home_page.css' %}">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-	<header>
-		<div class="header" style="background: url({% static 'img/home_page/header-bg.svg' %});">
-			<div class="logo">
-				<img src="{% static 'img/home_page/logo.svg' %}" alt="Logo">
-			</div>
+{% endblock %}
 
-			<div class="middle-content">
-				<div class="header__title">
-					<h1>Международная научно-практическая онлайн-олимпиада</h1>
-				</div>
-				<div class="right-image">
-					<img src="{% static 'img/home_page/header-image.svg' %}">
+
+{% block content %}
+	<header style="background: url({% static 'img/home_page/header-bg.svg' %}) no-repeat;">
+		<div class="header-wrapper">
+			<div class="header__logo">
+				<img class="logo" src="{% static 'img/home_page/logo.svg' %}">
+			</div>
+			<div class="header__content">
+				<h1 class="header__content-title">Международная научно-практическая онлайн-олимпиада</h1>
+				<img class="header__content-image" src="{% static 'img/home_page/header-image.svg' %}">
+				<div class="participation">
+					<a class="button" href="{% url 'registration' %}">Принять участие</a>
+					<h3 class="timer">00:00:00</h3>
 				</div>
 			</div>
-			<div class="button-container">
-				<!-- Это какой-то мрак... -->
-				<a href="{% url 'registration' %}" class="button">Принять участие</a>
-			</div>
-
-			<div class="header-footer">
-				<div class="left-info">
-					<!-- TODO: vertical align -->
+			<div class="header__footer">
+				<div class="header__footer-left">
 					<p>Место проведения онлайн-олимпиады:</p>
 				</div>
-				<div class="right-info">
+				<div class="header__footer-right">
 					<p>Ростовский государственный экономический университет (РИНХ), Точка кипения РГЭУ (РИНХ)<br>
 					г. Ростов-на-Дону, ул. Б. Садовая, 69</p>
 				</div>
 			</div>
 		</div>
 	</header>
-</body>
-</html>
+
+	<section class="organizers">
+		<div class="organizers__info-block">
+			<div class="organizers__info-block-wrapper">
+				<h4 class="info-block__title">Соорганизаторы:</h4>
+				<div class="info-block__content">
+					<p class="info-block__content-item">Ростовский государственный экономический университет (РИНХ)</p>
+					<p class="info-block__content-item">Федеральная служба по финансовому мониторингу</p>
+					<p class="info-block__content-item">Международный учебно-методический центр финансового мониторинга</p>
+					<p class="info-block__content-item">Международный сетевой институт в сфере ПОД/ФТ</p>
+					<p class="info-block__content-item">Ростовское региональное отделение Вольного экономического общества России</p>
+				</div>
+			</div>
+			<div class="organizers__info-block-wrapper">
+				<h4 class="info-block__title">при поддержке</h4>
+				<div class="info-block__content">
+					<p class="info-block__content-item">Аппарата полномочного представителя Президента РФ в Южном федеральном округе</p>
+					<p class="info-block__content-item">Правительства Ростовской области</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="stages container">
+		<h3 class="stages__title">Олимпиада включает два этапа, проводимые в заочной форме с применением дистанционных образовательных технологий:</h3>
+		<div class="stages__grid">
+			<p class="stages__text">Первый этап представляет собой отборочный тур и предполагает выполнение индивидуальных тестовых заданий. Все участники первого этапа Олимпиады получают Сертификат установленного образца.</p>
+			<div class="stages__grid-wrapper">
+				<p class="stages__text">Второй этап к участию допускаются участники Первого этапа Олимпиады, набравшие наибольшее количество баллов. Второй этап предполагает выполнение индивидуальных тестовых заданий повышенного уровня сложности и решение кейс-задания.</p>
+				<div class="stages__grid">
+					<p class="stages__text">Победители Второго этапа Олимпиады получают Дипломы Победителей (1-е, 2-е и 3-е место).</p>
+					<p class="stages__text">Участники, набравшие наибольшее количество баллов после победителей, получают Дипломы Лауреатов.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
