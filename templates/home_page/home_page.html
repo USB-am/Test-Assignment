@@ -86,4 +86,19 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="commitet">
+		<h2 class="commitet__title">Программный комитет олимпиады</h2>
+		<div class="commitet__list">
+			{% for commitet_human in commitet %}
+				<div class="commitet__list-item">
+					<div class="commitet__list-item-photo">
+						<img src="{% static 'img/home_page/commitet.jpg' %}">
+					</div>
+					<h5 class="commitet__list-item-title">Дарт Вейдер<br>♥ {{ commitet_human }}</h5>
+					<p class="commitet__list-item-text">проректор по учебной работе РГЭУ (РИНХ), заведующий кафедрой экономики региона, отраслей и предприятий РГЭУ (РИНХ), к.э.н., доцент.</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
 {% endblock %}
