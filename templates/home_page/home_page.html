@@ -11,13 +11,17 @@
 	<header style="background: url({% static 'img/home_page/header-bg.svg' %}) no-repeat;">
 		<div class="header-wrapper">
 			<div class="header__logo">
-				<img class="logo" src="{% static 'img/home_page/logo.svg' %}">
+				<a href="{% url 'home_page' %}">
+					<img class="logo" src="{% static 'img/home_page/logo.svg' %}">
+				</a>
 			</div>
 			<div class="header__content">
 				<h1 class="header__content-title">Международная научно-практическая онлайн-олимпиада</h1>
 				<img class="header__content-image" src="{% static 'img/home_page/header-image.svg' %}">
 				<div class="participation">
-					<a class="button" href="{% url 'registration' %}">Принять участие</a>
+					{% if user.is_authenticated %}
+						<a class="button" href="{% url 'registration' %}">Принять участие</a>
+					{% endif %}
 					<h3 class="timer">00:00:00</h3>
 				</div>
 			</div>

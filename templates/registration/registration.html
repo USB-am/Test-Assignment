@@ -10,7 +10,9 @@
 	<header style="background: url({% static 'img/home_page/header-bg.svg' %}); background-size: cover;">
 		<div class="header-wrapper">
 			<div class="logo">
-				<img src="{% static 'img/home_page/logo.svg' %}" alt="Logo">
+				<a href="{% url 'home_page' %}">
+					<img src="{% static 'img/home_page/logo.svg' %}" alt="Logo">
+				</a>
 			</div>
 			<div class="title">
 				<h1>Регистрация участия</h1>
