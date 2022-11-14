@@ -4,6 +4,38 @@
 	<title>Participants list</title>
 {% endblock %}
 
+<style>
+div a {
+	margin-right: 30px;
+}
+</style>
+
 {% block content %}
-	<h1>Participants list page</h1>
+	<div style="margin: 20px 40px;">
+	<h1>Participants list page <a href="{% url 'home_page' %}">Back</a></h1>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Institution</th>
+			<th>Phone number</th>
+			<th>E-mail</th>
+		</tr>
+		{% for participant in participants %}
+			<tr>
+				<td>{{ participant.name }}</td>
+				<td>{{ participant.institution }}</td>
+				<td>{{ participant.phone_number }}</td>
+				<td>{{ participant.email }}</td>
+			<tr>
+		{% endfor %}
+	</table>
+	<div>
+		<a href="?page=1">1</a>
+		{% if page_obj.has_next %}
+			<a href="?page={{ page_obj.next_page_number }}">
+				{{ page_obj.next_page_number }}
+			</a>
+		{% endif %}
+	</div>
+	</div>
 {% endblock %}
