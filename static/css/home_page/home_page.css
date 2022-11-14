@@ -270,7 +270,7 @@ header {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	column-gap: 30px;
-	row-gap: 64px;
+	row-gap: 60px;
 }
 .commitet__list-item {
 	min-width: 254px;
@@ -280,12 +280,24 @@ header {
 	margin: 0 auto;
 	position: relative;
 }
-.commitet__list-item-photo img {
+.commitet__list-item-photo-bg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 70%;
+	padding: 0 15%;
+}
+.reverse-bg {
+	transform: scale(-1, 1);
+}
+.commitet__list-item-photo-img {
+	max-height: 180px;
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 10px;
+	max-width: 130px;
 }
 .commitet__list-item-title {
 	font-family: 'Montserrat', sans-serif;

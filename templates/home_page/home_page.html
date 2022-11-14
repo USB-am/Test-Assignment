@@ -22,7 +22,7 @@
 					{% if user.is_authenticated %}
 						<a class="button" href="{% url 'registration' %}">Принять участие</a>
 					{% endif %}
-					<h3 class="timer">00:00:00</h3>
+					<!-- <h3 class="timer">00:00:00</h3> -->
 				</div>
 			</div>
 			<div class="header__footer">
@@ -94,14 +94,28 @@
 	<section class="commitet">
 		<h2 class="commitet__title">Программный комитет олимпиады</h2>
 		<div class="commitet__list">
-			{% for commitet_human in commitet %}
+			{% for num, commitet_human in commitet %}
 				<div class="commitet__list-item">
 					<div class="commitet__list-item-photo">
-						<img src="{% static 'img/home_page/commitet.jpg' %}">
+						{% if num|divisibleby:"2" %}
+							<img class="commitet__list-item-photo-bg reverse-bg" src="{% static 'img/home_page/commitet-bg.svg' %}">
+						{% else %}
+							<img class="commitet__list-item-photo-bg" src="{% static 'img/home_page/commitet-bg.svg' %}">
+						{% endif %}
+						<img class="commitet__list-item-photo-img" src="{% static 'img/home_page/commitet.jpg' %}">
 					</div>
-					<h5 class="commitet__list-item-title">Дарт Вейдер<br>♥ {{ commitet_human }}</h5>
-					<p class="commitet__list-item-text">проректор по учебной работе РГЭУ (РИНХ), заведующий кафедрой экономики региона, отраслей и предприятий РГЭУ (РИНХ), к.э.н., доцент.</p>
+					<h5 class="commitet__list-item-title">{{ commitet_human.name }}</h5>
+					<p class="commitet__list-item-text">{{ commitet_human.description }}</p>
 				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="gallery__title">Фотогалерея</div>
+		<div class="gallery__list">
+			{% for image in gallery %}
+				<img class="gallery__list-item" src="{% static 'img/home_page/gallery/0.jpg' %}">
 			{% endfor %}
 		</div>
 	</section>
