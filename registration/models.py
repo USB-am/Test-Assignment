@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 
 class Participant(models.Model):
 	''' Модель участка олимпиады '''
-	name = models.CharField(max_length=100, verbose_name='Ф.И.О. участника')
+	name = models.CharField(max_length=100, verbose_name='ФИО')
 	institution = models.CharField(max_length=255, verbose_name='Учебное заведение')
 	phone_number = models.CharField(max_length=50, verbose_name='Номер телефона')
 	email = models.EmailField(max_length=100, verbose_name='E-mail')
