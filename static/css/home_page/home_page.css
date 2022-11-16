@@ -38,7 +38,6 @@ header {
 	width: 49%;
 	display: flex;
 	justify-content: space-between;
-	/*margin-bottom: 139px;*/
 }
 .button {
 	padding: 23px 64px;
@@ -50,6 +49,11 @@ header {
 	font-size: 19px;
 	line-height: 28px;
 	color: #FFFFFF;
+	transition: .3s;
+}
+.button:hover {
+	transition: .3s;
+	background: #3676C1;
 }
 .timer {
 	padding: 23px 64px;
@@ -88,6 +92,75 @@ header {
 	font-size: 14px;
 	line-height: 21px;
 	color: #FFFFFF;
+}
+
+@media screen and (max-width: 1370px) {
+	.header-wrapper {
+		padding-bottom: 0;
+	}
+	.header__content-title {
+		width: 100%;
+	}
+	.header__content-image {
+		opacity: .4;
+	}
+	.header__footer {
+		margin-top: 220px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.header-wrapper {
+		padding: 40px;
+	}
+	.header__content-title {
+		text-align: center;
+	}
+	.header__content-image {
+		opacity: .2;
+	}
+	.participation {
+		margin-top: 100px;
+		width: 100%;
+		justify-content: center;
+	}
+	.header__footer {
+		margin-top: 100px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.header-wrapper {
+		padding: 0;
+	}
+	.header__logo {
+		padding: 40px;
+	}
+	.header__content-title {
+		font-size: 40px;
+		padding-top: 0;
+	}
+	.header__content-image {
+		display: none;
+	}
+	.participation {
+		margin-top: 0;
+	}
+	.header__footer {
+		margin-top: 50px;
+		flex-direction: column;
+	}
+	.header__footer-left {
+		margin-right: 0;
+		text-align: center;
+	}
+	.header__footer-right {
+		margin-right: 0;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 320px) {
+	.header__content-title {
+		font-size: 24px;
+	}
 }
 /* === HEADER === */
 /* ============== */
@@ -135,6 +208,41 @@ header {
 .info-block__content-item:last-child {
 	margin-right: 0;
 }
+@media screen and (max-width: 1200px) {
+	.organizers {
+		padding-bottom: 40px;
+	}
+	.organizers__info-block {
+		flex-direction: column;
+	}
+	.organizers__info-block-wrapper {
+		margin-bottom: 60px;
+	}
+	.organizers__info-block-wrapper:last-child {
+		margin-bottom: 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	.organizers {
+		padding: 40px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.info-block__content {
+		flex-direction: column;
+	}
+	.organizers__info-block-wrapper {
+		margin-right: 0;
+	}
+	.info-block__title {
+		text-align: center;
+	}
+	.info-block__content-item {
+		margin-right: 0;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+}
 /* === ORGANIZERS === */
 /* ================== */
 
@@ -172,6 +280,22 @@ header {
 	color: #2A30B1;
 	letter-spacing: -1.55px;
 }
+@media screen and (max-width: 768px) {
+	.stages {
+		margin: 0 40px;
+	}
+	.stages__title {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 425px) {
+	.stages__grid {
+		grid-template-columns: 1fr;
+	}
+	.stages__text {
+		text-align: center;
+	}
+}
 /* === STAGES === */
 /* ============== */
 
@@ -179,7 +303,7 @@ header {
 /* === PURPOSE === */
 .purpose {
 	min-height: 515px;
-	margin: 0 247px;
+	margin: 0 17.15%;
 }
 .purpose__title {
 	margin-left: 40px;
@@ -246,6 +370,11 @@ header {
 	color: #2F185F;
 	letter-spacing: -1.5px;
 }
+@media screen and (max-width: 425px) {
+	.purpose__slider-tabs {
+		flex-wrap: wrap;
+	}
+}
 /* === PURPOSE === */
 /* =============== */
 
@@ -271,6 +400,8 @@ header {
 	grid-template-rows: 1fr 1fr;
 	column-gap: 30px;
 	row-gap: 60px;
+	/*display: flex;
+	flex-wrap: wrap;*/
 }
 .commitet__list-item {
 	min-width: 254px;
@@ -319,6 +450,37 @@ header {
 	text-align: center;
 	color: #191773;
 	letter-spacing: -1px;
+}
+@media screen and (max-width: 1300px) {
+	.commitet__list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.commitet__list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (max-width: 768px) {
+	.commitet {
+		margin: 0 40px;
+	}
+	.commitet__list-item-text {
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.commitet__list {
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 320px) {
+	.commitet__title {
+		font-size: 24px;
+	}
+	.commitet__list {
+		row-gap: 0px;
+	}
 }
 /* === COMMITET === */
 /* ================ */
