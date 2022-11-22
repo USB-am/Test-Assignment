@@ -1,41 +1,46 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
-	<title>Participants list</title>
+	<title>Список участников</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/participants_list/participants_list.css' %}">
 {% endblock %}
 
-<style>
-div a {
-	margin-right: 30px;
-}
-</style>
-
 {% block content %}
-	<div style="margin: 20px 40px;">
-	<h1>Participants list page <a href="{% url 'home_page' %}">Back</a></h1>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Institution</th>
-			<th>Phone number</th>
-			<th>E-mail</th>
-		</tr>
-		{% for participant in participants %}
-			<tr>
-				<td>{{ participant.name }}</td>
-				<td>{{ participant.institution }}</td>
-				<td>{{ participant.phone_number }}</td>
-				<td>{{ participant.email }}</td>
-			<tr>
-		{% endfor %}
-	</table>
-	<div>
-		<a href="?page=1">1</a>
-		{% if page_obj.has_next %}
-			<a href="?page={{ page_obj.next_page_number }}">
-				{{ page_obj.next_page_number }}
-			</a>
-		{% endif %}
-	</div>
-	</div>
+	<section class="participants_list" style="background: url({% static 'img/home_page/header-bg.svg' %}); background-size: cover;">
+		<div class="participants_list-wrapper">
+			<div class="participants_list__header">
+				<a class="logo-link" href="{% url 'home_page' %}">
+					<img src="{% static 'img/home_page/logo.svg' %}" alt="Логотип">
+				</a>
+				<h1 class="participants_list__title">Список участников</h1>
+			</div>
+			<div class="participants_list__table-container">
+				<table class="participants_list__table">
+					<tr>
+						<th>ФИО участника</th>
+						<th>Учебное заведение</th>
+						<th>Номер телефона</th>
+						<th>E-mail</th>
+					</tr>
+					{% for participant in participants %}
+						<tr>
+							<td>{{ participant.name }}</td>
+							<td>{{ participant.institution }}</td>
+							<td>{{ participant.phone_number }}</td>
+							<td>{{ participant.email }}</td>
+						</tr>
+					{% endfor %}
+				</table>
+				<div class="paginator__container">
+					<a class="paginator__button" href="?page=1">1</a>
+					{% if page_obj.has_next %}
+						<a class="paginator__button" href="?page={{ page_obj.next_page_number }}">
+							{{ page_obj.next_page_number }}
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

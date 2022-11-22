@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, td, th, a {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	color: #fff;
+}
+a {
+	text-decoration: none;
+}
+
+
+.participants_list {
+	min-height: 100vh;
+}
+.participants_list-wrapper {
+	padding: 80px;
+	padding-left: 165px;
+	padding-bottom: 20px;
+}
+.participants_list__header {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 60px;
+}
+.participants_list__title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 69px;
+	margin-top: 20px;
+}
+.participants_list__table-container {
+	width: 100%;
+	display: flex;
+}
+.participants_list__table {
+	width: 100%;
+	border-spacing: 0;
+	background-color: rgba(0, 0, 0, .1);
+}
+.participants_list__table tr {
+	transition: .3s;
+	height: 46px;
+}
+.participants_list__table tr:hover {
+	transition: .3s;
+	background-color: rgba(255, 255, 255, .3);
+}
+.participants_list__table th {
+	font-size: 20px;
+	border: 1px solid #fff;
+	padding: 15px;
+	height: 61px;
+}
+.participants_list__table td {
+	font-size: 16px;
+	border: 1px solid #fff;
+	/*padding: 15px;*/
+	line-height: 16px;
+	text-align: center;
+	/*height: 56px;*/
+}
+.participants_list__table td:first-child {
+	text-align: left;
+	padding-left: 10px;
+}
+.paginator__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	min-width: 60px;
+	margin-top: 93px;
+}
+.paginator__button {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 22px;
+}
