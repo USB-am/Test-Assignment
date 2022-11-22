@@ -34,6 +34,11 @@
 				</table>
 				<div class="paginator__container">
 					<a class="paginator__button" href="?page=1">1</a>
+					{% if page_obj.has_previous and page_obj.previous_page_number > 1 %}
+						<a class="paginator__button" href="?page={{ page_obj.previous_page_number }}">
+							{{ page_obj.previous_page_number }}
+						</a>
+					{% endif %}
 					{% if page_obj.has_next %}
 						<a class="paginator__button" href="?page={{ page_obj.next_page_number }}">
 							{{ page_obj.next_page_number }}
